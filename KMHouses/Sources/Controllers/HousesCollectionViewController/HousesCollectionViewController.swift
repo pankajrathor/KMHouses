@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HousesCollectionViewController.swift
 //  KMHouses
 //
 //  Created by Pankaj Rathor on 14/09/16.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HousesCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print("inside viewDidLoad");
     }
 
     override func didReceiveMemoryWarning() {

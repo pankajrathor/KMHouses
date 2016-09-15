@@ -2,7 +2,7 @@
 //  HouseGridFlowLayout.swift
 //  UICollectionViewFlowLayout subclass to define the layout of the cells in grid view.
 //
-//  Created by Pankaj Rathor on 15/09/16.
+//  Created by Pankaj Rathor on 14/09/16.
 //  Copyright © 2016 Sogeti B.V. All rights reserved.
 //
 

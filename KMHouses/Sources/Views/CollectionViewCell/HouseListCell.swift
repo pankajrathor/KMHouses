@@ -2,7 +2,7 @@
 //  HouseListCell.swift
 //  HouseListCell is the subclass of UICollectionViewCell for displaying the house data in the collection view.
 //
-//  Created by Pankaj Rathor on 15/09/16.
+//  Created by Pankaj Rathor on 14/09/16.
 //  Copyright © 2016 Sogeti B.V. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  HouseDetailsViewController.swift
 //  HouseDetailsViewController class to display the House details along with bigger image.
 //
-//  Created by Pankaj Rathor on 15/09/16.
+//  Created by Pankaj Rathor on 14/09/16.
 //  Copyright © 2016 Sogeti B.V. All rights reserved.
 //
 

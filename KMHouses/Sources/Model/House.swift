@@ -8,7 +8,7 @@
 
 import Foundation
 
-class House: NSObject {
+class House {
     
     var name: String?
     var address: String?

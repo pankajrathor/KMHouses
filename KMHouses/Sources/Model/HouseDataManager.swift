@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+class HouseDataManager {
+    
+    var houseList: Array<House>?
+    
+    init(array: [AnyObject]) {
+        
+        self.houseList = Array()
+        
+    }
+    
+    func load(plistNamed: String) {
+        
+//        for value in array {
+//            let houseDictionary = value as! Dictionary<String, AnyObject>
+//            
+//            let house = House(dictionary: houseDictionary)
+//            
+//            self.houseList?.append(house)
+//        }
+    }
+    
+    
+}

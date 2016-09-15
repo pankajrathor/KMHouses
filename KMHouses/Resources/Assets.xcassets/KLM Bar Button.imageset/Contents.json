@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "KLM_Logo_20pxh.png",
+      "filename" : "KLM_Logo.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "KLM_Logo_20pxh@2x.png",
+      "filename" : "KLM_Logo@2x.png",
       "scale" : "2x"
     },
     {

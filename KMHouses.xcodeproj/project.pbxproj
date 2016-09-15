@@ -387,7 +387,8 @@
 		2B2596CD1D89716700768E86 /* table-95@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B25960D1D89716700768E86 /* table-95@2x.png */; };
 		2B2596CE1D89716700768E86 /* table-96.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B25960E1D89716700768E86 /* table-96.png */; };
 		2B2596CF1D89716700768E86 /* table-96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B25960F1D89716700768E86 /* table-96@2x.png */; };
-		2B2596D11D89733800768E86 /* Miniatures.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B2596D01D89733800768E86 /* Miniatures.plist */; };
+		2B2596D31D8980D600768E86 /* HouseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596D21D8980D600768E86 /* HouseDataManager.swift */; };
+		2B2596D51D8A820600768E86 /* Miniatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B2596D41D8A820600768E86 /* Miniatures.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -773,7 +774,8 @@
 		2B25960D1D89716700768E86 /* table-95@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-95@2x.png"; path = "Resources/images/thumbnails/table-95@2x.png"; sourceTree = "<group>"; };
 		2B25960E1D89716700768E86 /* table-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-96.png"; path = "Resources/images/thumbnails/table-96.png"; sourceTree = "<group>"; };
 		2B25960F1D89716700768E86 /* table-96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-96@2x.png"; path = "Resources/images/thumbnails/table-96@2x.png"; sourceTree = "<group>"; };
-		2B2596D01D89733800768E86 /* Miniatures.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Miniatures.plist; path = Resources/Miniatures.plist; sourceTree = "<group>"; };
+		2B2596D21D8980D600768E86 /* HouseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseDataManager.swift; path = Sources/Model/HouseDataManager.swift; sourceTree = "<group>"; };
+		2B2596D41D8A820600768E86 /* Miniatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Miniatures.json; path = Resources/Miniatures.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -819,7 +821,7 @@
 				2B2593CC1D89503200768E86 /* User Interface */,
 				2B2593BC1D894E2F00768E86 /* Assets.xcassets */,
 				2B2593BE1D894E2F00768E86 /* Info.plist */,
-				2B2596D01D89733800768E86 /* Miniatures.plist */,
+				2B2596D41D8A820600768E86 /* Miniatures.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -985,6 +987,7 @@
 			isa = PBXGroup;
 			children = (
 				2B2593DF1D89547B00768E86 /* House.swift */,
+				2B2596D21D8980D600768E86 /* HouseDataManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1540,7 +1543,6 @@
 				2B2596C91D89716700768E86 /* table-93@2x.png in Resources */,
 				2B2595491D89712700768E86 /* real91.png in Resources */,
 				2B2595221D89712700768E86 /* real52.png in Resources */,
-				2B2596D11D89733800768E86 /* Miniatures.plist in Resources */,
 				2B2594791D8970FA00768E86 /* miniature54.png in Resources */,
 				2B25966B1D89716700768E86 /* table-46@2x.png in Resources */,
 				2B2596CE1D89716700768E86 /* table-96.png in Resources */,
@@ -1612,6 +1614,7 @@
 				2B2595141D89712700768E86 /* real38.png in Resources */,
 				2B2594A11D8970FA00768E86 /* miniature94.png in Resources */,
 				2B2594A01D8970FA00768E86 /* miniature93.png in Resources */,
+				2B2596D51D8A820600768E86 /* Miniatures.json in Resources */,
 				2B2596911D89716700768E86 /* table-65@2x.png in Resources */,
 				2B2593DB1D89521500768E86 /* Main.storyboard in Resources */,
 				2B2596211D89716700768E86 /* table-09@2x.png in Resources */,
@@ -1735,6 +1738,7 @@
 			files = (
 				2B2593DD1D89531700768E86 /* HousesCollectionViewController.swift in Sources */,
 				2B2593E01D89547B00768E86 /* House.swift in Sources */,
+				2B2596D31D8980D600768E86 /* HouseDataManager.swift in Sources */,
 				2B2593C71D894FD500768E86 /* AppDelegate.swift in Sources */,
 				2B2593E31D89655400768E86 /* Constants.swift in Sources */,
 			);
@@ -1891,6 +1895,7 @@
 				2B2593BA1D894D3C00768E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

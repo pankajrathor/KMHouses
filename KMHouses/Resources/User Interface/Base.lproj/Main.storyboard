@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5js-aO-cSB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Houses Collection View Controller-->
+        <!--Houses-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HousesCollectionViewController" customModule="KMHouses" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,11 +17,114 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SoX-Hn-wgr">
+                                <rect key="frame" x="0.0" y="496" width="600" height="60"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-C3-Qzr">
+                                        <rect key="frame" x="154.5" y="16" width="291" height="29"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Missing"/>
+                                            <segment title="Collected"/>
+                                            <segment title="Duplicate"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.46666666670000001" green="0.74509803919999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IbI-Ir-loI"/>
+                                    <constraint firstItem="rqo-C3-Qzr" firstAttribute="centerX" secondItem="SoX-Hn-wgr" secondAttribute="centerX" id="n6c-cN-Mey"/>
+                                    <constraint firstItem="rqo-C3-Qzr" firstAttribute="centerY" secondItem="SoX-Hn-wgr" secondAttribute="centerY" id="tfF-Z0-KIR"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-Ab-7Ap">
+                                <rect key="frame" x="0.0" y="64" width="600" height="432"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rSp-Hd-z9X">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Efq-Lz-0dK">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="75" height="75"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="PMv-Ab-7Ap" secondAttribute="trailing" constant="-20" id="JUD-hx-d0a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SoX-Hn-wgr" secondAttribute="bottom" id="P2v-it-NNk"/>
+                            <constraint firstItem="SoX-Hn-wgr" firstAttribute="top" secondItem="PMv-Ab-7Ap" secondAttribute="bottom" id="PYX-XW-htw"/>
+                            <constraint firstItem="PMv-Ab-7Ap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="XV7-LC-zmh"/>
+                            <constraint firstItem="PMv-Ab-7Ap" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aUl-sz-FBX"/>
+                            <constraint firstItem="SoX-Hn-wgr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dP0-jg-GbF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SoX-Hn-wgr" secondAttribute="trailing" constant="-20" id="eeA-LV-ULL"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Houses" id="pS1-ug-W0m">
+                        <barButtonItem key="leftBarButtonItem" image="KLM Bar Button" id="XGS-Qb-GRd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="7Cs-g3-T2N">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="bar" momentary="YES" id="O6D-Qh-LwL">
+                                <rect key="frame" x="490" y="7" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="" image="gallery" width="45"/>
+                                    <segment title="" image="globe" width="45"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="houseCollectionView" destination="PMv-Ab-7Ap" id="2Ec-Df-stN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1139" y="-375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eag-wD-p5t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5js-aO-cSB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JvM-LJ-zyI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46666666670000001" green="0.74509803919999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xTX-MM-ykC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDG-Kk-DAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="-375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="KLM Bar Button" width="33" height="20"/>
+        <image name="gallery" width="20" height="20"/>
+        <image name="globe" width="20" height="20"/>
+    </resources>
 </document>

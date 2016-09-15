@@ -92,6 +92,10 @@ class HousesCollectionViewController: UIViewController, UICollectionViewDataSour
         self.houseCollectionView.reloadData()
     }
     
+    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        houseCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     // Pass the selected House index to the destination view controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let houseDetailsViewController = segue.destinationViewController as? HouseDetailsViewController {

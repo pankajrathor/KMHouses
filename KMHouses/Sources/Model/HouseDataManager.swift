@@ -11,9 +11,11 @@ import SwiftyJSON
 
 class HouseDataManager {
     
+    static let sharedManager = HouseDataManager()
+    
     var houseList: Array<House>?
     
-    init() {
+    private init() {
         
         self.houseList = Array()
         

@@ -12,12 +12,13 @@ class HousesCollectionViewController: UIViewController, UICollectionViewDataSour
 
     @IBOutlet weak var houseCollectionView: UICollectionView!
     
-    var houseDataManager: HouseDataManager?
+    private var houseDataManager: HouseDataManager?
     
-    var houseGridFlowLayout = HouseGridFlowLayout()
-    var houseListFlowLayout = HouseListFlowLayout()
+    private var houseGridFlowLayout = HouseGridFlowLayout()
+    private var houseListFlowLayout = HouseListFlowLayout()
     
-    var gridFlowLayout = true
+    private var gridFlowLayout = true
+    private var selectedHouseIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class HousesCollectionViewController: UIViewController, UICollectionViewDataSour
         let titleDict = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict;
         
-        self.houseDataManager = HouseDataManager()
+        self.houseDataManager = HouseDataManager.sharedManager
         
         if let jsonFileName = NSBundle.mainBundle().pathForResource("Miniatures", ofType: "json") {
             
@@ -60,26 +61,15 @@ class HousesCollectionViewController: UIViewController, UICollectionViewDataSour
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if (self.gridFlowLayout) {
+        let houseCell = collectionView.dequeueReusableCellWithReuseIdentifier(HouseListCell.cellIdentifier, forIndexPath: indexPath) as! HouseListCell
         
-            let houseCell = collectionView.dequeueReusableCellWithReuseIdentifier(HouseListCell.cellIdentifier, forIndexPath: indexPath) as! HouseListCell
-            
-            let house = houseDataManager![indexPath.row]
-            
-            houseCell.setHouseData(house)
-            
-            return houseCell
-        }
-        else {
-            let houseCell = collectionView.dequeueReusableCellWithReuseIdentifier(HouseListCell.cellIdentifier, forIndexPath: indexPath) as! HouseListCell
-            
-            let house = houseDataManager![indexPath.row]
+        let house = houseDataManager![indexPath.row]
 
-            houseCell.setHouseData(house)
-            
-            return houseCell
-        }
+        houseCell.setHouseData(house)
+        
+        return houseCell
     }
+    
     @IBAction func galleryButtonClicked(sender: AnyObject) {
         
         let segmentedControl = sender as! UISegmentedControl
@@ -106,12 +96,19 @@ class HousesCollectionViewController: UIViewController, UICollectionViewDataSour
             // Handle globe tapped event
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let houseDetailsViewController = segue.destinationViewController as? HouseDetailsViewController {
+            houseDetailsViewController.house = self.houseDataManager![self.selectedHouseIndex]
+        }
+        
+    }
 }
 
 extension HousesCollectionViewController: UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-            
+        selectedHouseIndex = indexPath.row
     }
 }
 

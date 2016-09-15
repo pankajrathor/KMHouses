@@ -10,6 +10,8 @@ import UIKit
 
 class HouseGridFlowLayout: UICollectionViewFlowLayout {
     
+    let itemHeight: CGFloat = 80
+    
     override init() {
         super.init()
         setupLayout()
@@ -30,7 +32,8 @@ class HouseGridFlowLayout: UICollectionViewFlowLayout {
     }
     
     func itemWidth() -> CGFloat {
-        return (CGRectGetWidth(collectionView!.frame)/4)-1
+//        return (CGRectGetWidth(collectionView!.frame)/4)-1
+        return itemHeight
     }
     
     override var itemSize: CGSize {

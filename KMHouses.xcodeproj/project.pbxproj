@@ -389,6 +389,10 @@
 		2B2596CF1D89716700768E86 /* table-96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B25960F1D89716700768E86 /* table-96@2x.png */; };
 		2B2596D31D8980D600768E86 /* HouseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596D21D8980D600768E86 /* HouseDataManager.swift */; };
 		2B2596D51D8A820600768E86 /* Miniatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B2596D41D8A820600768E86 /* Miniatures.json */; };
+		2B2596D91D8A99D000768E86 /* HouseGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596D81D8A99D000768E86 /* HouseGridCell.swift */; };
+		2B2596DD1D8A9D1200768E86 /* HouseGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596DC1D8A9D1200768E86 /* HouseGridFlowLayout.swift */; };
+		2B2596DF1D8AA3FE00768E86 /* HouseListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596DE1D8AA3FE00768E86 /* HouseListFlowLayout.swift */; };
+		2B2596E11D8AA4C200768E86 /* HouseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596E01D8AA4C200768E86 /* HouseListCell.swift */; };
 		B55A6020CC7EC870757A4D17 /* Pods_KMHouses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74436C454EF79B26FF1B4E6 /* Pods_KMHouses.framework */; };
 /* End PBXBuildFile section */
 
@@ -777,6 +781,10 @@
 		2B25960F1D89716700768E86 /* table-96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-96@2x.png"; path = "Resources/images/thumbnails/table-96@2x.png"; sourceTree = "<group>"; };
 		2B2596D21D8980D600768E86 /* HouseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseDataManager.swift; path = Sources/Model/HouseDataManager.swift; sourceTree = "<group>"; };
 		2B2596D41D8A820600768E86 /* Miniatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Miniatures.json; path = Resources/Miniatures.json; sourceTree = "<group>"; };
+		2B2596D81D8A99D000768E86 /* HouseGridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseGridCell.swift; path = Sources/Views/CollectionViewCell/HouseGridCell.swift; sourceTree = "<group>"; };
+		2B2596DC1D8A9D1200768E86 /* HouseGridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseGridFlowLayout.swift; path = Sources/Views/FlowLayout/HouseGridFlowLayout.swift; sourceTree = "<group>"; };
+		2B2596DE1D8AA3FE00768E86 /* HouseListFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseListFlowLayout.swift; path = Sources/Views/FlowLayout/HouseListFlowLayout.swift; sourceTree = "<group>"; };
+		2B2596E01D8AA4C200768E86 /* HouseListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseListCell.swift; path = Sources/Views/CollectionViewCell/HouseListCell.swift; sourceTree = "<group>"; };
 		4D8DEC6F7F9B5B3B9D2AEB4B /* Pods-KMHouses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMHouses.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMHouses/Pods-KMHouses.release.xcconfig"; sourceTree = "<group>"; };
 		82BA9A33EE80AEF0851415FE /* Pods-KMHouses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMHouses.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMHouses/Pods-KMHouses.debug.xcconfig"; sourceTree = "<group>"; };
 		B74436C454EF79B26FF1B4E6 /* Pods_KMHouses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMHouses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -844,6 +852,7 @@
 		2B2593C21D894E3A00768E86 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2B2596D61D8A998D00768E86 /* Views */,
 				2B2593E11D89650600768E86 /* Common */,
 				2B2593DE1D89545000768E86 /* Model */,
 				2B2593C81D894FDC00768E86 /* Controllers */,
@@ -1304,6 +1313,33 @@
 				2B25960F1D89716700768E86 /* table-96@2x.png */,
 			);
 			name = thumbnails;
+			sourceTree = "<group>";
+		};
+		2B2596D61D8A998D00768E86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B2596DA1D8A9CE000768E86 /* FlowLayout */,
+				2B2596D71D8A999600768E86 /* CollectionViewCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2B2596D71D8A999600768E86 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B2596D81D8A99D000768E86 /* HouseGridCell.swift */,
+				2B2596E01D8AA4C200768E86 /* HouseListCell.swift */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2B2596DA1D8A9CE000768E86 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2B2596DC1D8A9D1200768E86 /* HouseGridFlowLayout.swift */,
+				2B2596DE1D8AA3FE00768E86 /* HouseListFlowLayout.swift */,
+			);
+			name = FlowLayout;
 			sourceTree = "<group>";
 		};
 		B66F8B1951700F1B1F2C272B /* Pods */ = {
@@ -1811,10 +1847,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2596D91D8A99D000768E86 /* HouseGridCell.swift in Sources */,
 				2B2593DD1D89531700768E86 /* HousesCollectionViewController.swift in Sources */,
+				2B2596DF1D8AA3FE00768E86 /* HouseListFlowLayout.swift in Sources */,
 				2B2593E01D89547B00768E86 /* House.swift in Sources */,
 				2B2596D31D8980D600768E86 /* HouseDataManager.swift in Sources */,
+				2B2596DD1D8A9D1200768E86 /* HouseGridFlowLayout.swift in Sources */,
 				2B2593C71D894FD500768E86 /* AppDelegate.swift in Sources */,
+				2B2596E11D8AA4C200768E86 /* HouseListCell.swift in Sources */,
 				2B2593E31D89655400768E86 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

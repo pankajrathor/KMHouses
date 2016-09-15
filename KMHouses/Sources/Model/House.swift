@@ -33,7 +33,7 @@ class House {
         }
         
         if let number = dictionary[Constants.Number] {
-            self.number = number as! Int
+            self.number = number.integerValue!
         }
         
         if let descriptionEnglish = dictionary[Constants.DescriptionEnglish] {

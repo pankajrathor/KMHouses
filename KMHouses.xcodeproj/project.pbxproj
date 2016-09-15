@@ -389,6 +389,7 @@
 		2B2596CF1D89716700768E86 /* table-96@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B25960F1D89716700768E86 /* table-96@2x.png */; };
 		2B2596D31D8980D600768E86 /* HouseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2596D21D8980D600768E86 /* HouseDataManager.swift */; };
 		2B2596D51D8A820600768E86 /* Miniatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B2596D41D8A820600768E86 /* Miniatures.json */; };
+		B55A6020CC7EC870757A4D17 /* Pods_KMHouses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74436C454EF79B26FF1B4E6 /* Pods_KMHouses.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -776,6 +777,9 @@
 		2B25960F1D89716700768E86 /* table-96@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "table-96@2x.png"; path = "Resources/images/thumbnails/table-96@2x.png"; sourceTree = "<group>"; };
 		2B2596D21D8980D600768E86 /* HouseDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HouseDataManager.swift; path = Sources/Model/HouseDataManager.swift; sourceTree = "<group>"; };
 		2B2596D41D8A820600768E86 /* Miniatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Miniatures.json; path = Resources/Miniatures.json; sourceTree = "<group>"; };
+		4D8DEC6F7F9B5B3B9D2AEB4B /* Pods-KMHouses.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMHouses.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMHouses/Pods-KMHouses.release.xcconfig"; sourceTree = "<group>"; };
+		82BA9A33EE80AEF0851415FE /* Pods-KMHouses.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMHouses.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMHouses/Pods-KMHouses.debug.xcconfig"; sourceTree = "<group>"; };
+		B74436C454EF79B26FF1B4E6 /* Pods_KMHouses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMHouses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -783,17 +787,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55A6020CC7EC870757A4D17 /* Pods_KMHouses.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1437A11A0082C2FC810BDAA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B74436C454EF79B26FF1B4E6 /* Pods_KMHouses.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2B25939D1D894D3C00768E86 = {
 			isa = PBXGroup;
 			children = (
 				2B2593A81D894D3C00768E86 /* KMHouses */,
 				2B2593A71D894D3C00768E86 /* Products */,
+				B66F8B1951700F1B1F2C272B /* Pods */,
+				1437A11A0082C2FC810BDAA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1291,6 +1306,15 @@
 			name = thumbnails;
 			sourceTree = "<group>";
 		};
+		B66F8B1951700F1B1F2C272B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82BA9A33EE80AEF0851415FE /* Pods-KMHouses.debug.xcconfig */,
+				4D8DEC6F7F9B5B3B9D2AEB4B /* Pods-KMHouses.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1298,9 +1322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B2593B81D894D3C00768E86 /* Build configuration list for PBXNativeTarget "KMHouses" */;
 			buildPhases = (
+				F48E1CD8363930CE0C7217BC /* [CP] Check Pods Manifest.lock */,
 				2B2593A21D894D3C00768E86 /* Sources */,
 				2B2593A31D894D3C00768E86 /* Frameworks */,
 				2B2593A41D894D3C00768E86 /* Resources */,
+				632FCD7AFEDBFFE84B29F3A7 /* [CP] Embed Pods Frameworks */,
+				033EA020791F799514AEA08E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1731,6 +1758,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		033EA020791F799514AEA08E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMHouses/Pods-KMHouses-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		632FCD7AFEDBFFE84B29F3A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMHouses/Pods-KMHouses-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F48E1CD8363930CE0C7217BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B2593A21D894D3C00768E86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1853,6 +1928,7 @@
 		};
 		2B2593B91D894D3C00768E86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82BA9A33EE80AEF0851415FE /* Pods-KMHouses.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1866,6 +1942,7 @@
 		};
 		2B2593BA1D894D3C00768E86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8DEC6F7F9B5B3B9D2AEB4B /* Pods-KMHouses.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

@@ -21,4 +21,5 @@ struct Constants {
     static let CollectedCount = "collectedCount"
     static let RealImageName = "realImageName"
     static let Movie = "movie"
+    static let Miniatures = "miniatures"
 }

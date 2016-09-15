@@ -1,6 +1,6 @@
 //
 //  HouseListCell.swift
-//  KMHouses
+//  HouseListCell is the subclass of UICollectionViewCell for displaying the house data in the collection view.
 //
 //  Created by Pankaj Rathor on 15/09/16.
 //  Copyright © 2016 Sogeti B.V. All rights reserved.
@@ -10,6 +10,7 @@ import UIKit
 
 class HouseListCell: UICollectionViewCell {
     
+    // Cell identifier
     static let cellIdentifier = "HouseListCellIdentifier"
     
     @IBOutlet private weak var houseImageView: UIImageView!
@@ -17,6 +18,7 @@ class HouseListCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var addressLabel: UILabel!
     
+    // Method to set the UI elements with House details
     func setHouseData(house: House)  {
         
         let imageViewLayer = self.houseImageView.layer
@@ -55,6 +57,7 @@ class HouseListCell: UICollectionViewCell {
         }
     }
     
+    // Overriding the method to clean the cell for reuse
     override func prepareForReuse() {
         super.prepareForReuse()
         houseImageView.image = nil

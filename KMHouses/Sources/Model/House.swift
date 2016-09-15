@@ -22,6 +22,7 @@ class House {
     var realImageName: String?
     var movie: String?
     
+    // initializer with dictionary as input to initialize the model object
     init(dictionary: Dictionary<String, AnyObject>) {
         
         if let name = dictionary[Constants.Name] {

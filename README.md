@@ -6,6 +6,13 @@ Functionality
 1. Displays a grid or list of miniature collection.
 2. Tapping on the minitature items displays its details.
 3. Toggle between grid view and list view for the collection.
+4. The application is supported on iPhone and iPad devices.
+
+Project Usage
+=========================
+1. Clone or download the project
+2. Run 'pod install' command to setup the dependency with SwiftyJSON.
+3. Open KMHouses.xcworkspace in Xcode and start using it.
 
 Developement Enviroment
 =========================

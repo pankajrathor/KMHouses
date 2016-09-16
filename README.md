@@ -13,6 +13,7 @@ Project Usage
 1. Clone or download the project
 2. Run 'pod install' command to setup the dependency with SwiftyJSON.
 3. Open KMHouses.xcworkspace in Xcode and start using it.
+4. In case you do not see any scheme in the workspace to run the application, go to Manage Schemes -> Autocreate Schemes Now to create a scheme and start using it.
 
 Developement Enviroment
 =========================

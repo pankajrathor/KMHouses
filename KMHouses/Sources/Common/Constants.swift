@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Constants structure for mapping the keys inside th
+// Constants structure for mapping the keys from the JSON files
 struct Constants {
     static let Address = "address"
     static let DescriptionEnglish = "descriptionEN"

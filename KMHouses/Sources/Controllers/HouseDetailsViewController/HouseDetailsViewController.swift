@@ -19,6 +19,8 @@ class HouseDetailsViewController: UIViewController {
     // Index of the item that needs to be displayed
     var houseIndex: Int = 0
     
+    var houseDetails: House?
+    
     // Overriding viewWillAppear to setup the UI elements.
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,14 +31,12 @@ class HouseDetailsViewController: UIViewController {
     // Setting up the UI elements using the House object details
     func setupHouseDetails() {
         
-        let house = HouseDataManager.sharedManager[self.houseIndex]
-        
-        let name = house.name
+        let name = houseDetails!.name
         
         // If name of the house is missing, display the locality/area of the address filed in nameLabel and city in addressLabel
         if name == "" {
             
-            let address = house.address
+            let address = houseDetails!.address
             
             if let addressComponents = address?.componentsSeparatedByString(",") {
                 
@@ -53,12 +53,12 @@ class HouseDetailsViewController: UIViewController {
         else {
             
             self.nameLabel.text = name
-            self.addressLabel.text = house.address
+            self.addressLabel.text = houseDetails!.address
         }
         
-        let imageName = String(format: "miniature%d.png", house.number)
+        let imageName = String(format: "miniature%d.png", houseDetails!.number)
         self.houseImageView.image = UIImage(named: imageName)
         
-        self.numberLabel.text = String(format: "%02d", house.number)
+        self.numberLabel.text = String(format: "%02d", houseDetails!.number)
     }
 }

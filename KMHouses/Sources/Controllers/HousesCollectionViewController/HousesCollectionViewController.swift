@@ -99,7 +99,7 @@ class HousesCollectionViewController: UIViewController, UICollectionViewDataSour
     // Pass the selected House index to the destination view controller
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let houseDetailsViewController = segue.destinationViewController as? HouseDetailsViewController {
-            houseDetailsViewController.houseIndex = selectedHouseIndex
+            houseDetailsViewController.houseDetails = self.houseDataManager![selectedHouseIndex]
         }
     }
 }
